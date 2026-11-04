@@ -30,13 +30,6 @@ body {
   margin: 0 auto;
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
-
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
