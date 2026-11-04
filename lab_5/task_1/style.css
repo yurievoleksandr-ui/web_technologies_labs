@@ -1,0 +1,91 @@
+/* Контейнер div */
+div {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Заголовок h1 */
+div > h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Спільні вимоги до маркерованих списків */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+}
+
+/* Список 1-го уровня */
+body > div > ul {
+    background-color: rgb(103, 158, 128);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+body > div > ul > li {
+    background-image: url('icons/checklist_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); /* Или ваша иконка 1-го уровня */
+    padding-left: 35px;
+    background-position: 10px 15px;
+}
+
+/* Список 2-го уровня */
+body > div > ul ul {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102); /* Оливковый фон 2-го уровня */
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+body > div > ul ul > li {
+    margin-bottom: 10px;
+    padding-left: 35px; /* Отступ под иконки 2-го уровня */
+}
+
+/* Загальні стилі для span */
+span {
+    padding: 10px 20px;
+    display: inline-block;
+    color: white; /* Белый цвет текста */
+}
+
+/* span 1-го уровня */
+body > div > ul > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106); /* Розово-терракотовый фон */
+    margin-bottom: 10px;
+}
+
+/* span 2-го уровня */
+body > div > ul ul > li > span {
+    background-color: rgb(218, 106, 32); /* Оранжевый фон */
+}
+
+/* --- Подключение индивидуальных иконок 2-го уровня --- */
+body > div > ul > li:nth-child(1) ul > li:nth-child(1) { background-image: url('icons/route_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+body > div > ul > li:nth-child(1) ul > li:nth-child(2) { background-image: url('icons/plane_contrails_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+body > div > ul > li:nth-child(1) ul > li:nth-child(3) { background-image: url('icons/hotel_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+body > div > ul > li:nth-child(1) ul > li:nth-child(4) { background-image: url('icons/car_tag_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+
+body > div > ul > li:nth-child(2) ul > li:nth-child(1) { background-image: url('icons/local_bar_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+body > div > ul > li:nth-child(2) ul > li:nth-child(2) { background-image: url('icons/casino_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+body > div > ul > li:nth-child(2) ul > li:nth-child(3) { background-image: url('icons/museum_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
+body > div > ul > li:nth-child(2) ul > li:nth-child(4) { background-image: url('icons/festival_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png'); }
