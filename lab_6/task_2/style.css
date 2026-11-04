@@ -1,4 +1,4 @@
-/* Батьківський контейнер */
+
 .container {
     position: relative;
     width: 450px;
@@ -12,7 +12,6 @@
     text-align: center;
 }
 
-/* Загальні стилі для всіх блоків */
 .block {
     position: absolute;
     box-sizing: border-box;
@@ -24,7 +23,7 @@
     transition: opacity 0.3s, visibility 0.3s;
 }
 
-/* Блок 1: Зелений (верхній лівий) - постійно видимий */
+
 .block-1 {
     top: 15px;
     left: 15px;
@@ -35,7 +34,7 @@
     z-index: 1;
 }
 
-/* Блок 2: Синій (знизу по центру) - початково прихований */
+
 .block-2 {
     top: 220px;
     left: 130px;
@@ -48,7 +47,7 @@
     z-index: 2;
 }
 
-/* Блок 3: Фіолетовий (верхній правий) - початково прихований */
+
 .block-3 {
     top: 15px;
     right: 15px;
@@ -61,19 +60,19 @@
     z-index: 3;
 }
 
-/* 1. При наведенні на Блок 1 з'являється Блок 2 */
+
 .block-1:hover + .block-2 {
     opacity: 1;
     visibility: visible;
 }
 
-/* 2. Щоб Блок 2 не зникав, коли курсор переходить безпосередньо на нього */
+
 .block-2:hover {
     opacity: 1;
     visibility: visible;
 }
 
-/* 3. При наведенні на Блок 2 (або утриманні курсору над ним) з'являється Блок 3 */
+
 .block-2:hover + .block-3 {
     opacity: 1;
     visibility: visible;

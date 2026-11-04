@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Завдання 4 - Навігаційні панелі</title>
-    <!-- Підключення Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. Горизонтальна фіксована панель (тільки іконки) -->
+
     <nav class="horizontal-nav">
         <ul class="h-menu">
             <li class="h-item active">
@@ -34,7 +33,6 @@
                     <li><a href="#">Написати</a></li>
                 </ul>
             </li>
-            <!-- Останній пункт меню вирівняний справа -->
             <li class="h-item h-right">
                 <a href="#"><span class="material-icons">person</span></a>
                 <ul class="dropdown dropdown-right">
@@ -45,16 +43,15 @@
         </ul>
     </nav>
 
-    <!-- Основна область для сторінки -->
+   
     <div class="content-wrapper">
 
-        <!-- 2. Sticky "липка" панель -->
+       
         <div class="sticky-bar">
             📌 Липка панель (position: sticky) — залишається зверху при прокручуванні
         </div>
 
         <div class="main-layout">
-            <!-- 3. Вертикальна панель (синя, з іконками та текстом) -->
             <aside class="vertical-nav">
                 <ul class="v-menu">
                     <li class="v-item active">
@@ -70,7 +67,7 @@
                             <li><a href="#">Про нас</a></li>
                             <li class="has-sub">
                                 <a href="#">Послуги &raquo;</a>
-                                <!-- Третій рівень вкладеності -->
+                              
                                 <ul class="v-dropdown-sub">
                                     <li><a href="#">Дизайн</a></li>
                                     <li><a href="#">Розробка</a></li>
@@ -89,7 +86,7 @@
                 </ul>
             </aside>
 
-            <!-- Контент сторінки для перевірки scroll -->
+   
             <main class="content-area">
                 <h2>Контентна зона</h2>
                 <p>Прокрутіть сторінку донизу, щоб перевірити роботу <strong>fixed</strong> меню та <strong>sticky</strong> елемента.</p>

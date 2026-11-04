@@ -20,13 +20,13 @@ body {
     height: 340px;
 }
 
-/* 1. Кнопки-стрілки ліворуч */
+
 .nav-arrows {
     position: absolute;
     top: 75px;
     left: 0;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.4); /* Напівпрозорий фон */
+    background-color: rgba(255, 255, 255, 0.4); 
     border: 1px solid rgba(0, 0, 0, 0.15);
     z-index: 3;
 }
@@ -53,7 +53,7 @@ body {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* 2. Головна чорна картка */
+
 .main-card {
     position: absolute;
     top: 15px;
@@ -61,7 +61,7 @@ body {
     width: 210px;
     height: 210px;
     background-color: #0d0d0d;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Глибока тінь */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
     z-index: 2;
     padding: 20px;
     display: flex;
@@ -75,21 +75,21 @@ body {
     line-height: 1;
 }
 
-/* 3. Зображення хмари */
+
 .cloud {
     position: absolute;
     top: 55px;
     left: 85px;
     width: 250px;
     height: 120px;
-    /* Стилізація пухнастої хмаринки за допомогою білого радіального градієнта та розмиття */
+    
     background: radial-gradient(circle at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0) 70%);
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
     border-radius: 50px;
-    z-index: 4; /* Розміщена поверх чорного блоку */
+    z-index: 4; 
 }
 
-/* 4. Світлий блок з прогнозом (внизу праворуч) */
+
 .forecast-card {
     position: absolute;
     bottom: 20px;
@@ -97,8 +97,8 @@ body {
     width: 215px;
     height: 100px;
     background-color: #d8d8d8;
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2); /* Прямокутна тінь-зсув згідно зі зразком */
-    z-index: 1; /* Розміщена під головним блоком */
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
     display: flex;
     justify-content: space-around;
     align-items: center;

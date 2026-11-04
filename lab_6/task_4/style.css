@@ -9,16 +9,14 @@ body {
     background-color: #f4f6f9;
 }
 
-/* ==========================================
-   1. ГОРИЗОНТАЛЬНА НАВІГАЦІЯ (Згідно з фото)
-   ========================================== */
+
 .horizontal-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: #4e4e4e; /* Темно-сірий фон з фото */
+    background-color: #4e4e4e;
     z-index: 1000;
 }
 
@@ -44,18 +42,18 @@ body {
     transition: background-color 0.2s;
 }
 
-/* Активний пункт меню — зелений з фото */
+
 .h-item.active > a,
 .h-item:hover > a {
     background-color: #4caf50;
 }
 
-/* Останній пункт меню вирівняний справа через float */
+
 .h-item.h-right {
     float: right;
 }
 
-/* Випадні меню */
+
 .h-item .dropdown {
     display: none;
     position: absolute;
@@ -88,9 +86,7 @@ body {
     background-color: #4caf50;
 }
 
-/* ==========================================
-   2. STICKY ПАНЕЛЬ
-   ========================================== */
+
 .content-wrapper {
     margin-top: 50px;
 }
@@ -107,9 +103,7 @@ body {
     border-bottom: 2px solid #e5b84c;
 }
 
-/* ==========================================
-   3. ВЕРТИКАЛЬНА НАВІГАЦІЯ (Згідно з фото)
-   ========================================== */
+
 .main-layout {
     display: flex;
 }
@@ -142,10 +136,10 @@ body {
 
 .v-item:hover > a,
 .v-item.active > a {
-    background-color: #005bb5; /* Темніший синій при наведенні */
+    background-color: #005bb5;
 }
 
-/* Випадне меню вертикальної панелі (2-й рівень) */
+
 .v-dropdown {
     display: none;
     position: absolute;
@@ -178,7 +172,7 @@ body {
     background-color: #004488;
 }
 
-/* Третій рівень вкладеності (3-й рівень) */
+
 .v-dropdown-sub {
     display: none;
     position: absolute;
@@ -193,7 +187,7 @@ body {
     display: block;
 }
 
-/* Зона контенту */
+
 .content-area {
     flex: 1;
     padding: 25px;

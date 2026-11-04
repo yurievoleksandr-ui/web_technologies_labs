@@ -9,7 +9,7 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Приховування чекбоксів */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -21,7 +21,7 @@ body {
     border: 0;
 }
 
-/* Верхня панель навігації */
+
 .header {
     display: flex;
     justify-content: flex-end;
@@ -86,27 +86,24 @@ body {
     justify-content: center;
 }
 
-/* ==========================================
-   ПОПАП ТА ЙОГО СТАНИ
-   ========================================== */
+
 .popup-dropdown {
     position: absolute;
     top: 50px;
-    right: 80px; /* Позиціонування під іконкою сітки */
+    right: 80px;
     width: 300px;
     background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     z-index: 1000;
-    
-    /* Початковий стан: прихований */
+
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s, visibility 0.2s;
 }
 
-/* Стрілочка зверху попапу */
+
 .popup-dropdown::before {
     content: '';
     position: absolute;
@@ -119,13 +116,13 @@ body {
     border-bottom: 8px solid #ffffff;
 }
 
-/* ВІДКРИТТЯ ПОПАПУ ПРИ КЛІКУ НА ІКОНКУ */
+
 #popup-toggle:checked ~ .popup-dropdown {
     opacity: 1;
     visibility: visible;
 }
 
-/* Вміст попапу */
+
 .popup-content {
     max-height: 280px;
     padding: 15px;
@@ -175,7 +172,7 @@ body {
     color: #3c4043;
 }
 
-/* Кнопка More */
+
 .btn-more {
     display: block;
     width: 100%;
@@ -204,7 +201,7 @@ body {
     margin-top: 12px;
 }
 
-/* РОЗШИРЕНИЙ SCROLLABLE СТАН ПІСЛЯ НАТИСКАННЯ MORE */
+
 #more-toggle:checked ~ .popup-content {
     overflow-y: auto;
 }
@@ -217,7 +214,7 @@ body {
     display: grid;
 }
 
-/* Кольори іконок */
+
 .color-blue { color: #4285f4; }
 .color-orange { color: #ea4335; }
 .color-blue-light { color: #1a73e8; }
