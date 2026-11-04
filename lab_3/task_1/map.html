@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5 — Інтерактивна карта України</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="map-container">
+        <h2>Завдання 5: Інтерактивна карта України</h2>
+        <p>Натисніть на область карти, щоб перейти на відповідну сторінку у Вікіпедії:</p>
+
+        <!-- Блочний елемент із зображенням карти -->
+        <div class="map-wrapper">
+            <!-- Зображення карти з прив'язаною картю usemap -->
+            <img src="/lab_3/task_1/img/images_1.jpeg" alt="Карта України" usemap="#ukraine_map">
+
+            <!-- Визначення інтерактивних областей (Image Map) -->
+            <map name="ukraine_map">
+                <!-- Київська область -->
+                <area shape="circle" coords="225,131,15" href="https://uk.wikipedia.org/wiki/Київська_область" target="_blank" alt="Київська область" title="Київська область">
+                
+                <!-- Львівська область -->
+                <area shape="circle" coords="74,145,15" href="https://uk.wikipedia.org/wiki/Львівська_область" target="_blank" alt="Львівська область" title="Львівська область">
+                
+                <!-- Одеська область -->
+                <area shape="circle" coords="222,247,15" href="https://uk.wikipedia.org/wiki/Одеська_область" target="_blank" alt="Одеська область" title="Одеська область">
+                
+                <!-- Харківська область -->
+                <area shape="circle" coords="372,152,15" href="https://uk.wikipedia.org/wiki/Харківська_область" target="_blank" alt="Харківська область" title="Харківська область">
+                
+                <!-- Дніпропетровська область (або інший регіон за координатами 326, 195) -->
+                <area shape="circle" coords="326,195,15" href="https://uk.wikipedia.org/wiki/Дніпропетровська_область" target="_blank" alt="Дніпропетровська область" title="Дніпропетровська область">
+            </map>
+        </div>
+
+        <br><br>
+        <a href="/lab_3/task_1/index.html" class="back-link">Повернутись на головну</a>
+    </div>
+
+</body>
+</html>
