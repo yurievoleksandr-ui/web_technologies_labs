@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Приховування чекбоксів */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Верхня панель навігації */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.top-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #5f6368;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 8px;
+}
+
+.nav-link:hover {
+    color: #202124;
+}
+
+.popup-button,
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #5f6368;
+    user-select: none;
+}
+
+.popup-button:hover,
+.icon-btn:hover,
+.user-avatar:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+.popup-button:focus,
+.icon-btn:focus,
+.user-avatar:focus,
+.nav-link:focus {
+    outline: 2px solid #4285f4;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   ПОПАП ТА ЙОГО СТАНИ
+   ========================================== */
+.popup-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 80px; /* Позиціонування під іконкою сітки */
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    
+    /* Початковий стан: прихований */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Стрілочка зверху попапу */
+.popup-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+}
+
+/* ВІДКРИТТЯ ПОПАПУ ПРИ КЛІКУ НА ІКОНКУ */
+#popup-toggle:checked ~ .popup-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Вміст попапу */
+.popup-content {
+    max-height: 280px;
+    padding: 15px;
+    overflow: hidden;
+    outline: none;
+}
+
+.popup-content:focus {
+    border: 2px solid #4285f4;
+    border-radius: 6px;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 8px;
+    text-align: center;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.app-item:hover {
+    border-color: #e0e0e0;
+    background-color: #f8f9fa;
+}
+
+.app-item:focus {
+    outline: 2px solid #4285f4;
+    background-color: #e8f0fe;
+}
+
+.app-icon {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.app-label {
+    font-size: 12px;
+    color: #3c4043;
+}
+
+/* Кнопка More */
+.btn-more {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 8px 0;
+    background-color: #f1f3f4;
+    color: #3c4043;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-more:hover {
+    background-color: #e8eaed;
+}
+
+.btn-more:focus {
+    outline: 2px solid #4285f4;
+}
+
+.extra-apps {
+    display: none;
+    margin-top: 12px;
+}
+
+/* РОЗШИРЕНИЙ SCROLLABLE СТАН ПІСЛЯ НАТИСКАННЯ MORE */
+#more-toggle:checked ~ .popup-content {
+    overflow-y: auto;
+}
+
+#more-toggle:checked ~ .popup-content .btn-more {
+    display: none;
+}
+
+#more-toggle:checked ~ .popup-content .extra-apps {
+    display: grid;
+}
+
+/* Кольори іконок */
+.color-blue { color: #4285f4; }
+.color-orange { color: #ea4335; }
+.color-blue-light { color: #1a73e8; }
+.color-green { color: #34a853; }
+.color-yellow { color: #fbbc05; }
+.color-green-dark { color: #0f9d58; }
+.color-red { color: #d93025; }
+.color-cyan { color: #129eaf; }
+.color-multi { color: #4285f4; }
+.color-grey { color: #70757a; }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6 - Google Apps Popup</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-nav">
+            <a href="#" class="nav-link" tabindex="0">Mail</a>
+            <a href="#" class="nav-link" tabindex="0">Images</a>
+
+            <!-- Чекбокс відкриття попапу має бути ПЕРЕД блоком попапу на одному рівні -->
+            <input type="checkbox" id="popup-toggle" class="sr-only">
+
+            <!-- Кнопка відкриття (іконка сітки 3х3) -->
+            <label for="popup-toggle" class="popup-button" tabindex="0" role="button" aria-label="Apps">
+                <span class="material-icons">apps</span>
+            </label>
+
+            <!-- Іконка сповіщень -->
+            <button class="icon-btn" tabindex="0" aria-label="Notifications">
+                <span class="material-icons">notifications</span>
+            </button>
+
+            <!-- Аватар -->
+            <div class="user-avatar" tabindex="0">
+                <span class="material-icons" style="font-size: 32px; color: #757575;">account_circle</span>
+            </div>
+
+            <!-- Контейнер попапу (знаходиться після #popup-toggle) -->
+            <div class="popup-dropdown">
+                <input type="checkbox" id="more-toggle" class="sr-only">
+
+                <div class="popup-content" tabindex="0">
+                    <!-- Перші 6 іконок -->
+                    <div class="app-grid">
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-blue">date_range</span>
+                            <span class="app-label">Calendar</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-orange">mail</span>
+                            <span class="app-label">Mail</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-blue-light">newspaper</span>
+                            <span class="app-label">News</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-green">map</span>
+                            <span class="app-label">Map</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-yellow">folder</span>
+                            <span class="app-label">Files</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-green-dark">contacts</span>
+                            <span class="app-label">Contacts</span>
+                        </a>
+                    </div>
+
+                    <!-- Кнопка More -->
+                    <label for="more-toggle" class="btn-more" tabindex="0" role="button">
+                        More
+                    </label>
+
+                    <!-- Додаткові 6 іконок -->
+                    <div class="app-grid extra-apps">
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-blue">g_translate</span>
+                            <span class="app-label">Translate</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-red">subscriptions</span>
+                            <span class="app-label">Videos</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-cyan">search</span>
+                            <span class="app-label">Search</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-yellow">photo_library</span>
+                            <span class="app-label">Photos</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-multi">apps</span>
+                            <span class="app-label">Apps</span>
+                        </a>
+                        <a href="#" class="app-item" tabindex="0">
+                            <span class="material-icons app-icon color-grey">description</span>
+                            <span class="app-label">Documents</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+</body>
+</html>
