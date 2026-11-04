@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+#italic-bold-text {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-shadow-effect {
+    text-shadow: 5px -5px 3px #888888;
+}
+
+.div-style-1 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+.div-style-2 {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
