@@ -1,0 +1,185 @@
+/* Базові стилі для демонстрації */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lesson {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.lesson h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  background-color: #e2e8f0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.item {
+  background-color: #3b82f6;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* --- Lessons 01-02: Fundamentals --- */
+.container--lesson2 {
+  grid-template-columns: 100px 200px auto;
+  grid-template-rows: 80px 80px;
+}
+
+/* --- Lesson 03: Implicit vs Explicit --- */
+.container--lesson3 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 60px 60px; /* Явна сітка закінчується на 4 елементі */
+  grid-auto-rows: 40px;          /* Неявна сітка для елементів 5 та 6 */
+}
+
+/* --- Lessons 04-05: repeat & fr --- */
+.container--lesson4 {
+  grid-template-columns: 1fr 2fr repeat(2, 1fr);
+}
+
+/* --- Lessons 06-07: Column/Row Spanning --- */
+.container--lesson6 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item--span-col {
+  grid-column: span 2;
+  background-color: #10b981;
+}
+
+.item--span-row {
+  grid-row: span 2;
+  background-color: #f59e0b;
+}
+
+.item--full-width {
+  grid-column: 1 / -1;
+  background-color: #ef4444;
+}
+
+/* --- Lessons 08-09: auto-fit vs auto-fill --- */
+.container--autofit {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-bottom: 15px;
+}
+
+.container--autofill {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+/* --- Lesson 10: Dense Flow --- */
+.container--dense {
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+}
+
+.item--big {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #8b5cf6;
+}
+
+/* --- Lessons 11-12: Alignment --- */
+.container--alignment {
+  grid-template-columns: repeat(2, 1fr);
+  height: 200px;
+  justify-items: center;
+  align-items: center;
+}
+
+.item--center-self {
+  justify-self: end;
+  align-self: start;
+  background-color: #ec4899;
+}
+
+/* --- Lessons 13-14: Grid Template Areas --- */
+.container--areas {
+  grid-template-columns: 180px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+.area-header  { grid-area: header; background: #6366f1; color: white; padding: 10px; }
+.area-sidebar { grid-area: sidebar; background: #a855f7; color: white; padding: 10px; }
+.area-content { grid-area: main; background: #3b82f6; color: white; padding: 10px; }
+.area-footer  { grid-area: footer; background: #475569; color: white; padding: 10px; }
+
+/* --- Lessons 15-16: Named Lines --- */
+.container--named-lines {
+  grid-template-columns: [site-start sidebar-start] 200px [sidebar-end content-start] 1fr [content-end site-end];
+}
+
+.item--sidebar { grid-column: sidebar-start / sidebar-end; background: #0284c7; }
+.item--main    { grid-column: content-start / content-end; background: #0d9488; }
+
+/* --- Lessons 17-20: Gallery Grid --- */
+.container--gallery {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+}
+
+.gallery-card {
+  background: #f43f5e;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.gallery-card.h2 { grid-column: span 2; }
+.gallery-card.h3 { grid-column: span 3; }
+.gallery-card.v2 { grid-row: span 2; }
+.gallery-card.v3 { grid-row: span 3; }
+
+/* --- Lessons 21-25: App Layout --- */
+.container--app-layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 150px;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  background: #1e293b;
+  color: white;
+  padding: 10px;
+}
+
+.app-body {
+  background: #cbd5e1;
+  padding: 20px;
+}

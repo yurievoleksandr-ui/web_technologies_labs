@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Course by Wes Bos — Практичний код</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Практичні приклади з курсу CSS Grid (Wes Bos)</h1>
+
+  <!-- Уроки 1-2: Базовий Grid (Fundamentals) -->
+  <section class="lesson">
+    <h2>Lessons 01-02: Fundamentals & Grid Container</h2>
+    <div class="container container--lesson2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </section>
+
+  <!-- Урок 3: Явна та неявна сітки (Explicit vs Implicit) -->
+  <section class="lesson">
+    <h2>Lesson 03: Implicit vs Explicit Grid</h2>
+    <div class="container container--lesson3">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5 (Implicit)</div>
+      <div class="item">6 (Implicit)</div>
+    </div>
+  </section>
+
+  <!-- Уроки 4-5: repeat() та дробові одиниці fr -->
+  <section class="lesson">
+    <h2>Lessons 04-05: repeat() & fr Units</h2>
+    <div class="container container--lesson4">
+      <div class="item">1fr</div>
+      <div class="item">2fr</div>
+      <div class="item">1fr</div>
+      <div class="item">1fr</div>
+    </div>
+  </section>
+
+  <!-- Уроки 6-7: Позиціонування за лініями та span -->
+  <section class="lesson">
+    <h2>Lessons 06-07: Sizing & Spanning Items (grid-column / grid-row)</h2>
+    <div class="container container--lesson6">
+      <div class="item item--span-col">Span 2 Cols</div>
+      <div class="item">2</div>
+      <div class="item item--span-row">Span 2 Rows</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item item--full-width">Full Width (1 / -1)</div>
+    </div>
+  </section>
+
+  <!-- Уроки 8-9: auto-fill, auto-fit та minmax() -->
+  <section class="lesson">
+    <h2>Lessons 08-09: auto-fill, auto-fit & minmax()</h2>
+    <h3>Auto-Fit (Розтягує колоночки):</h3>
+    <div class="container container--autofit">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+    <h3>Auto-Fill (Залишає порожні треки):</h3>
+    <div class="container container--autofill">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+  </section>
+
+  <!-- Урок 10: grid-auto-flow: dense -->
+  <section class="lesson">
+    <h2>Lesson 10: grid-auto-flow: dense</h2>
+    <div class="container container--dense">
+      <div class="item">1</div>
+      <div class="item item--big">2 (Big)</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item item--big">5 (Big)</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+    </div>
+  </section>
+
+  <!-- Уроки 11-12: Вирівнювання (Alignment & Centering) -->
+  <section class="lesson">
+    <h2>Lessons 11-12: Alignment (justify-items, align-items, place-items)</h2>
+    <div class="container container--alignment">
+      <div class="item item--center-self">Self Centered</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </section>
+
+  <!-- Уроки 13-14: Іменовані області (Grid Template Areas) -->
+  <section class="lesson">
+    <h2>Lessons 13-14: Grid Template Areas</h2>
+    <div class="container container--areas">
+      <header class="area-header">Header</header>
+      <aside class="area-sidebar">Sidebar</aside>
+      <main class="area-content">Main Content</main>
+      <footer class="area-footer">Footer</footer>
+    </div>
+  </section>
+
+  <!-- Уроки 15-16: Іменовані лінії (Naming Grid Lines) -->
+  <section class="lesson">
+    <h2>Lessons 15-16: Named Lines</h2>
+    <div class="container container--named-lines">
+      <div class="item item--sidebar">Sidebar</div>
+      <div class="item item--main">Main Content</div>
+    </div>
+  </section>
+
+  <!-- Уроки 17-20: Реальні кейси (Галерея з авто-розміщенням) -->
+  <section class="lesson">
+    <h2>Lessons 17-20: Image Gallery Grid Practice</h2>
+    <div class="container container--gallery">
+      <div class="gallery-card h2 v2">Card 1 (2x2)</div>
+      <div class="gallery-card h3">Card 2 (3x1)</div>
+      <div class="gallery-card v3">Card 3 (1x3)</div>
+      <div class="gallery-card">Card 4</div>
+      <div class="gallery-card h2">Card 5 (2x1)</div>
+      <div class="gallery-card">Card 6</div>
+    </div>
+  </section>
+
+  <!-- Уроки 21-25: Адаптивна система, Flexbox vs Grid, Reordering -->
+  <section class="lesson">
+    <h2>Lessons 21-25: Reordering, Flexbox vs Grid & App Layout</h2>
+    <div class="container container--app-layout">
+      <div class="app-nav">Nav (Flexbox)</div>
+      <div class="app-body">Grid Body</div>
+    </div>
+  </section>
+
+</body>
+</html>
