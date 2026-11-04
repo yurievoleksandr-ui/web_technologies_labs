@@ -1,0 +1,138 @@
+:root {
+  --font-family: 'Open Sans', sans-serif;
+  --color-text-dark: #3a3a3c;
+  --color-text-muted: #666a6e;
+  --color-border: #e1e5e8;
+  --color-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f4f7f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.weather-widget {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--color-bg);
+  padding: 24px;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.location {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--color-text-dark);
+  margin-bottom: 4px;
+}
+
+.date, .condition {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.temp-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.current-icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.temp-value {
+  font-size: 44px;
+  font-weight: 300;
+  color: var(--color-text-dark);
+}
+
+.temp-value .unit {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.current-details ul {
+  list-style: none;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  text-align: right;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.forecast-row:last-child {
+  border-bottom: none;
+}
+
+.day-name {
+  width: 110px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.forecast-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.temp-range {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50px;
+  font-size: 14px;
+}
+
+.high {
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.low {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.pollen {
+  width: 80px;
+  text-align: right;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
