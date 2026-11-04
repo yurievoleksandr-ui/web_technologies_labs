@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c4c4c4; /* Світло-сірий фон сторінки */
+    font-family: Arial, sans-serif;
+}
+
+/* Контейнер-оболонка для віджета */
+.weather-widget {
+    position: relative;
+    width: 380px;
+    height: 340px;
+}
+
+/* 1. Кнопки-стрілки ліворуч */
+.nav-arrows {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.4); /* Напівпрозорий фон */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    z-index: 3;
+}
+
+.arrow-btn {
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    color: #222;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-btn:last-child {
+    border-right: none;
+}
+
+.arrow-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 2. Головна чорна картка */
+.main-card {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    width: 210px;
+    height: 210px;
+    background-color: #0d0d0d;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Глибока тінь */
+    z-index: 2;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-temp {
+    color: #cfcfcf;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* 3. Зображення хмари */
+.cloud {
+    position: absolute;
+    top: 55px;
+    left: 85px;
+    width: 250px;
+    height: 120px;
+    /* Стилізація пухнастої хмаринки за допомогою білого радіального градієнта та розмиття */
+    background: radial-gradient(circle at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0) 70%);
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+    border-radius: 50px;
+    z-index: 4; /* Розміщена поверх чорного блоку */
+}
+
+/* 4. Світлий блок з прогнозом (внизу праворуч) */
+.forecast-card {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 215px;
+    height: 100px;
+    background-color: #d8d8d8;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2); /* Прямокутна тінь-зсув згідно зі зразком */
+    z-index: 1; /* Розміщена під головним блоком */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+}
+
+.day-name {
+    font-size: 13px;
+    color: #777;
+}
+
+.day-temp {
+    font-size: 16px;
+    font-weight: bold;
+}

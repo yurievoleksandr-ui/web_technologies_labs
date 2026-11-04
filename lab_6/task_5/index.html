@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5 - Віджет погоди</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-widget">
+        <!-- Кнопки перемикання (зліва, з прозорим фоном) -->
+        <div class="nav-arrows">
+            <button class="arrow-btn">&larr;</button>
+            <button class="arrow-btn">&rarr;</button>
+        </div>
+
+        <!-- Головний чорний блок із температурою 17 -->
+        <div class="main-card">
+            <span class="main-temp">17</span>
+        </div>
+
+        <!-- Зображення хмари (зависає поверх чорного блоку) -->
+        <div class="cloud"></div>
+
+        <!-- Нижній світлий блок із прогнозом на тиждень -->
+        <div class="forecast-card">
+            <div class="forecast-day">
+                <span class="day-name">Mon</span>
+                <span class="day-temp">17&deg;</span>
+            </div>
+            <div class="forecast-day">
+                <span class="day-name">Tue</span>
+                <span class="day-temp">19&deg;</span>
+            </div>
+            <div class="forecast-day">
+                <span class="day-name">Wed</span>
+                <span class="day-temp">16&deg;</span>
+            </div>
+            <div class="forecast-day">
+                <span class="day-name">Thu</span>
+                <span class="day-temp">18&deg;</span>
+            </div>
+            <div class="forecast-day">
+                <span class="day-name">Fri</span>
+                <span class="day-temp">21&deg;</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
