@@ -1,0 +1,80 @@
+/* Батьківський контейнер */
+.container {
+    position: relative;
+    width: 450px;
+    height: 400px;
+    margin: 40px auto;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Загальні стилі для всіх блоків */
+.block {
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Блок 1: Зелений (верхній лівий) - постійно видимий */
+.block-1 {
+    top: 15px;
+    left: 15px;
+    width: 190px;
+    height: 190px;
+    background-color: #00b050;
+    color: #000;
+    z-index: 1;
+}
+
+/* Блок 2: Синій (знизу по центру) - початково прихований */
+.block-2 {
+    top: 220px;
+    left: 130px;
+    width: 190px;
+    height: 160px;
+    background-color: #4f81bd;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+/* Блок 3: Фіолетовий (верхній правий) - початково прихований */
+.block-3 {
+    top: 15px;
+    right: 15px;
+    width: 190px;
+    height: 190px;
+    background-color: #594975;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+
+/* 1. При наведенні на Блок 1 з'являється Блок 2 */
+.block-1:hover + .block-2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 2. Щоб Блок 2 не зникав, коли курсор переходить безпосередньо на нього */
+.block-2:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3. При наведенні на Блок 2 (або утриманні курсору над ним) з'являється Блок 3 */
+.block-2:hover + .block-3 {
+    opacity: 1;
+    visibility: visible;
+}
