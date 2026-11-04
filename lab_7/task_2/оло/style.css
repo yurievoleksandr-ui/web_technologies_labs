@@ -1,0 +1,294 @@
+/* ==========================================
+   ОБНУЛЕННЯ ТА БАЗОВІ СТИЛІ
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f7f8;
+  color: #3a3a3c;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2a2a2d;
+}
+
+.lesson-card {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.lesson-card h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e1e5e8;
+}
+
+/* Універсальний контейнер та елементи */
+.flex-demo {
+  display: flex;
+  background-color: #f0f3f4;
+  padding: 10px;
+  border: 1px solid #e1e5e8;
+  min-height: 80px;
+}
+
+.flex-demo .box {
+  background-color: #2cd5c4;
+  color: #ffffff;
+  padding: 15px 20px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   УРОКИ 01–05: БАЗОВІ ВЛАСТИВОСТІ ТА НАПРЯМКИ
+   ========================================== */
+/* Lesson 02 */
+.lesson-2 .box {
+  background-color: #f95858;
+}
+
+/* Lesson 03 */
+.lesson-3 {
+  flex-direction: column;
+}
+.lesson-3 .box {
+  background-color: #3a3a3c;
+}
+
+/* Lesson 04 */
+.lesson-4 {
+  flex-wrap: wrap;
+}
+.lesson-4 .box {
+  width: 180px;
+}
+
+/* Lesson 05 */
+.lesson-5 .box {
+  background-color: #e44646;
+}
+.lesson-5 .ord-1 { order: 1; }
+.lesson-5 .ord-2 { order: 2; }
+.lesson-5 .ord-3 { order: 3; }
+
+/* ==========================================
+   УРОКИ 06–09: ВИРІВНЯННЯ ЗА ОСЯМИ
+   ========================================== */
+/* Lesson 06 */
+.lesson-6 {
+  justify-content: space-between;
+}
+
+/* Lesson 07 */
+.lesson-7 {
+  align-items: center;
+  height: 160px;
+}
+.lesson-7 .tall { height: 120px; }
+.lesson-7 .short { height: 50px; }
+
+/* Lesson 08 */
+.lesson-8 {
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 220px;
+}
+.lesson-8 .box { width: 120px; }
+
+/* Lesson 09 */
+.lesson-9 {
+  align-items: flex-start;
+  height: 150px;
+}
+.lesson-9 .self-end {
+  align-self: flex-end;
+  background-color: #f95858;
+}
+
+/* ==========================================
+   УРОКИ 10–13: РОЗМІРИ ТА СУМІСНІСТЬ
+   ========================================== */
+/* Lesson 10 */
+.lesson-10 .fx-1 { flex: 1; background-color: #f95858; }
+.lesson-10 .fx-2 { flex: 2; background-color: #2cd5c4; }
+
+/* Lesson 11 */
+.lesson-11 .gr-1 { flex-grow: 1; }
+.lesson-11 .gr-3 { flex-grow: 3; }
+.lesson-11 .bs-200 { flex-basis: 200px; }
+
+/* Lesson 12 */
+.lesson-12 { flex-wrap: wrap; }
+.lesson-12 .card { flex: 1 1 250px; background-color: #3a3a3c; }
+
+/* Lesson 13 */
+.lesson-13 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* ==========================================
+   УРОКИ 14–20: ПРАКТИЧНІ ІНТЕРФЕЙСИ
+   ========================================== */
+/* Lesson 14: Navigation */
+.nav-list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  background: #2a2a2d;
+}
+.nav-list li {
+  flex: 1;
+  text-align: center;
+}
+.nav-list a {
+  display: block;
+  padding: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-list a:hover {
+  background: #f95858;
+}
+
+/* Lesson 15: Content Reordering */
+.reorder-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.reorder-main {
+  background: #e1e5e8;
+  padding: 15px;
+}
+.reorder-sub {
+  background: #2cd5c4;
+  padding: 15px;
+  color: #fff;
+}
+@media (min-width: 600px) {
+  .reorder-wrap { flex-direction: row; }
+  .reorder-main { flex: 2; order: 2; }
+  .reorder-sub1 { flex: 1; order: 1; }
+  .reorder-sub2 { flex: 1; order: 3; }
+}
+
+/* Lesson 16: Centering */
+.center-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  width: 100%;
+  background: #e1e5e8;
+}
+.center-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Lesson 17: Pricing Grid */
+.pricing-grid {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+.plan {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.plan.featured {
+  border-color: #f95858;
+  border-width: 2px;
+}
+.plan button {
+  margin-top: 15px;
+  padding: 8px;
+  background: #f95858;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Lesson 18: Equal Height */
+.equal-cols {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+}
+.eq-col {
+  flex: 1;
+  padding: 15px;
+  background: #e1e5e8;
+  border-left: 4px solid #2cd5c4;
+}
+
+/* Lesson 19: Single Line Form */
+.single-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.single-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.single-form button {
+  padding: 10px 20px;
+  background: #f95858;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Lesson 20: Mobile App Layout */
+.app-frame {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  border: 1px solid #333;
+}
+.app-head, .app-foot {
+  flex: 0 0 40px;
+  background: #2a2a2d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #fff;
+}
