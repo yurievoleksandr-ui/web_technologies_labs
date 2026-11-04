@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4 - Навігаційні панелі</title>
+    <!-- Підключення Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Горизонтальна фіксована панель (тільки іконки) -->
+    <nav class="horizontal-nav">
+        <ul class="h-menu">
+            <li class="h-item active">
+                <a href="#"><span class="material-icons">home</span></a>
+                <ul class="dropdown">
+                    <li><a href="#">Головна сторінка</a></li>
+                    <li><a href="#">Новини</a></li>
+                </ul>
+            </li>
+            <li class="h-item">
+                <a href="#"><span class="material-icons">search</span></a>
+                <ul class="dropdown">
+                    <li><a href="#">Пошук по сайту</a></li>
+                    <li><a href="#">Категорії</a></li>
+                </ul>
+            </li>
+            <li class="h-item">
+                <a href="#"><span class="material-icons">mail</span></a>
+                <ul class="dropdown">
+                    <li><a href="#">Вхідні листи</a></li>
+                    <li><a href="#">Написати</a></li>
+                </ul>
+            </li>
+            <!-- Останній пункт меню вирівняний справа -->
+            <li class="h-item h-right">
+                <a href="#"><span class="material-icons">person</span></a>
+                <ul class="dropdown dropdown-right">
+                    <li><a href="#">Мій профіль</a></li>
+                    <li><a href="#">Вихід</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Основна область для сторінки -->
+    <div class="content-wrapper">
+
+        <!-- 2. Sticky "липка" панель -->
+        <div class="sticky-bar">
+            📌 Липка панель (position: sticky) — залишається зверху при прокручуванні
+        </div>
+
+        <div class="main-layout">
+            <!-- 3. Вертикальна панель (синя, з іконками та текстом) -->
+            <aside class="vertical-nav">
+                <ul class="v-menu">
+                    <li class="v-item active">
+                        <a href="#"><span class="material-icons">home</span> Home</a>
+                        <ul class="v-dropdown">
+                            <li><a href="#">Огляд</a></li>
+                            <li><a href="#">Останні події</a></li>
+                        </ul>
+                    </li>
+                    <li class="v-item">
+                        <a href="#"><span class="material-icons">web</span> About</a>
+                        <ul class="v-dropdown">
+                            <li><a href="#">Про нас</a></li>
+                            <li class="has-sub">
+                                <a href="#">Послуги &raquo;</a>
+                                <!-- Третій рівень вкладеності -->
+                                <ul class="v-dropdown-sub">
+                                    <li><a href="#">Дизайн</a></li>
+                                    <li><a href="#">Розробка</a></li>
+                                    <li><a href="#">SEO</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="v-item">
+                        <a href="#"><span class="material-icons">local_cafe</span> Work With Me</a>
+                        <ul class="v-dropdown">
+                            <li><a href="#">Контакти</a></li>
+                            <li><a href="#">Портфоліо</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Контент сторінки для перевірки scroll -->
+            <main class="content-area">
+                <h2>Контентна зона</h2>
+                <p>Прокрутіть сторінку донизу, щоб перевірити роботу <strong>fixed</strong> меню та <strong>sticky</strong> елемента.</p>
+                <div class="scroll-filler">
+                    <p>Текст для прокрутки сторінки...</p>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+</body>
+</html>
